@@ -1,0 +1,19 @@
+{
+  "name": "d2r-market",
+  "version": "1.0.0",
+  "description": "www.diabloii.market is a place for D2R players to trade in-game items and services with one another. This is a service that is provided by the community and is not affiliated with the official Blizzard team.",
+  "keywords": [
+    "d2r-market",
+    "diablo2-market",
+    "diablo2-market",
+    "diabloii-market",
+    "diablo-market",
+    "d2r-rushes"
+  ],
+  "author": "William L. Holt <beskar.labs@outlook.com>",
+  "license": "ISC",
+  "contributors": [
+    "ALCHElVlY",
+    "dependabot[bot]"
+  ],
+}
