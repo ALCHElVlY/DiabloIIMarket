@@ -18,7 +18,7 @@
 [![][readme-shield]][readme-url]
 ![][version-shield]
 ![][contributors-shield]
-[![][issues-shield]][issues-url]
+![][issues-shield]
 ![][keywords-shield]
 
 
@@ -34,9 +34,9 @@
   <!-- <h3 align="center">HLN-A</h3> -->
 
   <p align="center">
-    <a href="https://github.com/ALCHElVlY/d2r-market-public/issues">Report Bug</a>
+    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ALCHElVlY/d2r-market-public/issues">Request Feature</a>
+    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues">Request Feature</a>
     ·
     <a href="https://discord.gg/WqunCan">Support Discord</a>
   </p>
@@ -95,7 +95,7 @@ Here are any frameworks/libraries used in the applications development.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ALCHElVlY/d2r-market-public/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
+See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
 
 
 
@@ -127,7 +127,6 @@ Twitter: n/a
 [readme-shield]: https://img.shields.io/badge/readme%20style-standard-blue.svg?style=for-the-badge
 [readme-url]: https://github.com/ALCHElVlY/d2r-market#readme
 [version-shield]: https://img.shields.io/github/package-json/version/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/d2r-market?color=blue&style=for-the-badge
-[issues-url]: https://github.com/ALCHElVlY/d2r-market/issues
+[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
 [keywords-shield]: https://img.shields.io/github/package-json/keywords/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
