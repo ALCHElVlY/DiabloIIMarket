@@ -34,9 +34,9 @@
   <!-- <h3 align="center">HLN-A</h3> -->
 
   <p align="center">
-    <a href="https://github.com/ALCHElVlY/d2r-market/issues">Report Bug</a>
+    <a href="https://github.com/ALCHElVlY/d2r-market-public/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ALCHElVlY/d2r-market/issues">Request Feature</a>
+    <a href="https://github.com/ALCHElVlY/d2r-market-public/issues">Request Feature</a>
     ·
     <a href="https://discord.gg/WqunCan">Support Discord</a>
   </p>
@@ -95,7 +95,7 @@ Here are any frameworks/libraries used in the applications development.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ALCHElVlY/d2r-market/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
+See the [open issues](https://github.com/ALCHElVlY/d2r-market-public/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
 
 
 
