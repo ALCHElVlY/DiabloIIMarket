@@ -130,5 +130,5 @@ Twitter: n/a
 [version-url]: https://github.com/ALCHElVlY/d2r-market/releases
 [issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/d2r-market?color=blue&style=for-the-badge
 [issues-url]: https://github.com/ALCHElVlY/d2r-market/issues
-[contributors-shield]: https://img.shields.io/github/contributors/ALCHElVlY/d2r-market?color=blue&style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
 [keywords-shield]: https://img.shields.io/github/package-json/keywords/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
