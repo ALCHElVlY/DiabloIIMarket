@@ -8,7 +8,12 @@
     "diablo2-market",
     "diabloii-market",
     "diablo-market",
-    "d2r-rushes"
+    "d2r-rushes",
+    "rushes",
+    "cows",
+    "ubers",
+    "trades",
+    "trading"
   ],
   "author": "William L. Holt <beskar.labs@outlook.com>",
   "license": "ISC",
