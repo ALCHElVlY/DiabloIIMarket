@@ -16,7 +16,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![][readme-shield]][readme-url]
-[![][version-shield]][version-url]
+![][version-shield]
 ![][contributors-shield]
 [![][issues-shield]][issues-url]
 ![][keywords-shield]
@@ -126,8 +126,7 @@ Twitter: n/a
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [readme-shield]: https://img.shields.io/badge/readme%20style-standard-blue.svg?style=for-the-badge
 [readme-url]: https://github.com/ALCHElVlY/d2r-market#readme
-[version-shield]: https://img.shields.io/github/v/tag/ALCHElVlY/d2r-market?label=version&style=for-the-badge
-[version-url]: https://github.com/ALCHElVlY/d2r-market/releases
+[version-shield]: https://img.shields.io/github/package-json/version/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
 [issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/d2r-market?color=blue&style=for-the-badge
 [issues-url]: https://github.com/ALCHElVlY/d2r-market/issues
 [contributors-shield]: https://img.shields.io/github/contributors/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
