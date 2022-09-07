@@ -31,8 +31,6 @@
          alt="Logo" width="400" height="140">
   </a>
 
-  <!-- <h3 align="center">HLN-A</h3> -->
-
   <p align="center">
     <a href="https://github.com/ALCHElVlY/diablo-market-public/issues">Report Bug</a>
     ·
@@ -41,8 +39,6 @@
     <a href="https://discord.gg/WqunCan">Support Discord</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -62,18 +58,17 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 <p>
-   The diabloii.market is a web application for Diablo II: Resurrected that allows players to buy and sell in-game items and services with eachother. The application brings a "post n go" system for players across multiple platforms for the game. Battle.net authentication is required to engage in trades via the app to ensure a smooth and safe transaction process between players. Those that wish to be dishonest will be reported to Blizzard directly. This includes, but is not limited to scamming in any form, and/or attempting to trade with real-world currency.
+   The diabloii.market is a web application for Diablo II: Resurrected that allows players to buy and sell in-game items and services with eachother with in-game currency such as high runes(HR).
+   The application brings a "post n go" system for players across multiple platforms for the game.
+   Battle.net authentication is required to engage in trades via the app to ensure a smooth and safe transaction process between players.
+   Those that wish to be dishonest will be reported to Blizzard directly. This includes, but is not limited to scamming in any form, and/or attempting to trade with real-world currency.
 </p>
-
-
 
 ## Built With
 
@@ -83,28 +78,20 @@ Here are any frameworks/libraries used in the applications development.
 * [React](https://reactjs.org/)
 * [Node](https://nodejs.org/en/)
 
-
-
 <!-- API Documentation -->
 ## API
 
 <code>__API documentation coming soon..__</code>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
 
-
-
 <!-- LICENSE -->
 ## License
 
 No license, this is a private project. Currently not open source.
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -114,13 +101,11 @@ Website: www.beskarlabs.com<br>
 Facebook: n/a<br>
 Twitter: n/a
 
-
 <!-- ACKNOWLEDGEMENTS -->
 ## ACKNOWLEDGEMENTS
 
 1. My amazing wife Rey0Sun2187#6979 for her continued support in all of my programming projects!
 2. The [Fextralife Wiki](https://diablo2.wiki.fextralife.com) for providing the Diablo II: Resurrected item data.
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
