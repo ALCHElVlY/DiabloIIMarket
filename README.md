@@ -118,7 +118,7 @@ Twitter: n/a
 <!-- ACKNOWLEDGEMENTS -->
 ## ACKNOWLEDGEMENTS
 
-1. My amazing girlfriend Rey0Sun2187#6979 for her continued support in all of my programming projects!
+1. My amazing wife Rey0Sun2187#6979 for her continued support in all of my programming projects!
 2. The [Fextralife Wiki](https://diablo2.wiki.fextralife.com) for providing the Diablo II: Resurrected item data.
 
 
