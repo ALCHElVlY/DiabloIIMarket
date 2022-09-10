@@ -87,10 +87,10 @@ Here are any frameworks/libraries used in the applications development.
 
 <code>__API documentation coming soon..__</code>
 
-<!-- ROADMAP -->
+<!-- ROADMAP   [project board](https://github.com/users/ALCHElVlY/projects/3)-->
 ## Roadmap
 
-See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and [project board](https://github.com/users/ALCHElVlY/projects/3) for a list of planned updates.
+See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and <a href="https://github.com/users/ALCHElVlY/projects/3" target="_blank">project board</a> for a list of planned updates.
 
 <!-- LICENSE -->
 ## License
