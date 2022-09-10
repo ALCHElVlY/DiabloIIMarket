@@ -32,9 +32,13 @@
   </a>
 
   <p align="center">
-    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues">Report Bug</a>
+    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues/new?assignees=&labels=&template=bug_report.md&title=">
+      Report Bug
+    </a>
     ·
-    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues">Request Feature</a>
+    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues/new?assignees=&labels=&template=feature_request.md&title=">
+      Request Feature
+    </a>
     ·
     <a href="https://discord.gg/WqunCan">Support Discord</a>
   </p>
