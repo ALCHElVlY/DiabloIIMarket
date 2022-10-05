@@ -1,7 +1,7 @@
 ---
 name: Ask A Question
 about: Ask general questions regarding the diabloii.market application
-title: '[Question]: <title>'
+title: '[Question]: <insert title>'
 labels: 'question'
 assignees: ''
 
