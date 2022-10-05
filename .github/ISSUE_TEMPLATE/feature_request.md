@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: 'Feature Request: $1'
+title: '[Feature Request]: <title>'
 labels: 'enhancement'
-assignees: ['@ALCHElVlY']
+assignees: ['ALCHElVlY']
 
 ---
 
