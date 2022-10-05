@@ -12,5 +12,5 @@ jobs:
       - uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: "both"
-          parameters: '[ {"keywords": ["bug", "error"], "labels": ["BUG"], "assignees": ["ALCHElVlY"]}, {"keywords": ["doc", "docs", "documentation"], "labels": ["DOCUMENTATION"], "assignees": [""]}, {"keywords": ["duplicate"], "labels": ["DUPLICATE"], "assignees": [""]}, {"keywords": ["fix", "fixed", "corrected"], "labels": ["FIXED"], "assignees": [""]}, {"keywords": ["new feature", "add feature"], "labels": ["ENHANCMENT"], "assignees": ["ALCHElVlY"]}, {"keywords": ["will not fix", "wont fix"], "labels": ["WONTFIX"], "assignees": [""]}]'
+          parameters: '[ {"keywords": ["bug", "error"], "labels": ["bug"], "assignees": ["ALCHElVlY"]}, {"keywords": ["doc", "docs", "documentation"], "labels": ["documentation"], "assignees": [""]}, {"keywords": ["duplicate"], "labels": ["duplicate"], "assignees": [""]}, {"keywords": ["fix", "fixed", "corrected"], "labels": ["fixed"], "assignees": [""]}, {"keywords": ["new feature", "add feature"], "labels": ["enhancement"], "assignees": ["ALCHElVlY"]}, {"keywords": ["will not fix", "wont fix"], "labels": ["wontfix"], "assignees": [""]}]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
