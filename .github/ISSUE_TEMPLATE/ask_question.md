@@ -7,8 +7,5 @@ assignees: ''
 
 ---
   
-  <div>
-    <p><strong>Ask your question:</strong> be as clear and concise as possible</p>
-  </div>
-<!-- A concise description of what you're experiencing. -->
-  
+**Ask your question**
+Be as clear and concise as possible when asking questions (we are not mind readers).
