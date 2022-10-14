@@ -71,7 +71,7 @@
    Diabloii.market is a web application for Diablo II: Resurrected that allows players to buy and sell in-game items and services with eachother with in-game currency such as high runes(HR).
    The application brings a "post n go" system for players across multiple platforms for the game.
    Battle.net authentication is required to engage in trades via the app to ensure a smooth and safe transaction process between players.
-   Those that wish to be dishonest will be reported to Blizzard directly. This includes, but is not limited to scamming in any form, and/or attempting to trade with real-world currency.
+   Those that wish to engage in dishonest behavior will be reported to Blizzard directly. This includes, but is not limited to scamming in any form, and/or attempting to trade with real-world currency.
 </p>
 
 ## Built With
