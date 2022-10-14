@@ -110,13 +110,10 @@ Twitter: n/a
 
 <ol>
   <li>
-    My amazing wife Rey0Sun2187#6979 for her continued support in all of my programming projects!
-  </li>
-  <li>
     The <a href='https://diablo2.wiki.fextralife.com' target='_blank'>Fextralife Wiki</a> for providing the Diablo II: Resurrected item data.
   </li>
   <li>
-    B2crea over at <a href='http://www.thecirclepit.com/' target='_blank'>The Circle Pit</a> for the art work they contributed to the project
+    B2crea over at <a href='http://www.thecirclepit.com/' target='_blank'>The Circle Pit</a> for the artwork they contributed to the project
   </li>
 </ol>
 
