@@ -76,7 +76,7 @@
 
 ## Built With
 
-Here are any frameworks/libraries used in the applications development.
+The diabloii.market web application was built using the MERN stack.
 * [MongoDB](https://www.mongodb.com/cloud)
 * [Express](http://expressjs.com/)
 * [React](https://reactjs.org/)
