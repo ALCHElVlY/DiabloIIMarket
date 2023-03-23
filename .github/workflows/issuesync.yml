@@ -1,0 +1,38 @@
+name: Sync Issues and Pull Requests
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Public Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/diabloii-market
+      
+      - name: Checkout Private Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/DiabloMarket-source
+          token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+
+      - name: Create Issue/PR in Private Repo
+        run: |
+          issue_title=$(echo "${{ github.event.issue.title }}" | tr ' ' '_')
+          issue_body=$(echo "${{ github.event.issue.body }}" | tr '\n' '\\n')
+          pr_title=$(echo "${{ github.event.pull_request.title }}" | tr ' ' '_')
+          pr_body=$(echo "${{ github.event.pull_request.body }}" | tr '\n' '\\n')
+          hub issue create -m "${issue_title}" -m "${issue_body}" -r DiabloMarket-source
+          hub pull-request create -m "${pr_title}" -m "${pr_body}" -r DiabloMarket-source
+      - name: Push changes to Private Repo
+        run: |
+          git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
+          git config --global user.name "${{ secrets.GIT_USER_NAME }}"
+          git add .
+          git commit -m "Sync issues and pull requests"
+          git push
