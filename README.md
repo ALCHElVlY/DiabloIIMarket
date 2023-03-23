@@ -1,12 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -50,9 +41,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li><a href="#docs">Documentation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -74,13 +62,6 @@
    Those that wish to engage in dishonest behavior will be reported to Blizzard directly. This includes, but is not limited to scamming in any form, and/or attempting to trade with real-world currency.
 </p>
 
-## Built With
-
-The diabloii.market web application was built using the MERN stack.
-* [MongoDB](https://www.mongodb.com/cloud)
-* [Express](http://expressjs.com/)
-* [React](https://reactjs.org/)
-* [Node](https://nodejs.org/en/)
 
 <!-- API Documentation -->
 ## API
@@ -95,7 +76,7 @@ See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) 
 <!-- LICENSE -->
 ## License
 
-No license, this is a private project. Currently not open source.
+None.
 
 <!-- CONTACT -->
 ## Contact
