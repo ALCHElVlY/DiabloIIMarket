@@ -11,9 +11,11 @@ assignees: ['ALCHElVlY']
 A clear and concise description of what the bug is.
  ------------------------------------- Begin typing below ↓ -------------------------------------
 
+ 
 **To Reproduce**
 Steps to reproduce the behavior:
  ------------------------------------- Begin typing below ↓ -------------------------------------
+ 
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
@@ -23,6 +25,7 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
  ------------------------------------- Begin typing below ↓ -------------------------------------
 
+ 
 **Screenshots**
 If applicable, add screenshots to help explain your problem. <br />
 * Note: use an image hosting resource such as [Imgur](https://www.imgur.com) *
