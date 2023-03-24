@@ -5,6 +5,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout Public Repo
         uses: actions/checkout@v2
@@ -15,10 +17,26 @@ jobs:
         with:
           repository: ALCHElVlY/DiabloMarket-source
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+      - name: Check Issue Exists in Public Repo
+        if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/diabloii-market')
+        id: check_public_issue
+        run: |
+          public_url=${{ github.event.comment.html_url }}
+          public_issue_number=$(echo $public_url | sed 's/.*\/\([0-9]*\).*$/\1/g')
+          public_issue_exists=$(gh api "repos/ALCHElVlY/diabloii-market/issues/$public_issue_number" --silent | jq '.number')
+          echo ::set-output name=public_issue_number::$public_issue_number
+          echo ::set-output name=public_issue_exists::$public_issue_exists
+      - name: Check Issue Exists in Private Repo
+        if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/DiabloMarket-source')
+        id: check_private_issue
+        run: |
+          private_url=${{ github.event.comment.html_url }}
+          private_issue_number=$(echo $private_url | sed 's/.*\/\([0-9]*\).*$/\1/g')
+          private_issue_exists=$(gh api "repos/ALCHElVlY/DiabloMarket-source/issues/$private_issue_number" --silent | jq '.number')
+          echo ::set-output name=private_issue_number::$private_issue_number
+          echo ::set-output name=private_issue_exists::$private_issue_exists
       - name: Sync Public to Private
         if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/diabloii-market')
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           public_url=${{ github.event.comment.html_url }}
           private_url=$(echo $public_url | sed 's/public/source/g')
@@ -27,8 +45,6 @@ jobs:
           gh api "$private_url" -f body="$private_comment"
       - name: Sync Private to Public
         if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/DiabloMarket-source')
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           private_url=${{ github.event.comment.html_url }}
           public_url=$(echo $private_url | sed 's/source/public/g')
