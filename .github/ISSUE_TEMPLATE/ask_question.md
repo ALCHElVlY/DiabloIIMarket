@@ -8,5 +8,5 @@ assignees: ''
 ---
   
 **Ask your question**
-Be as clear and concise as possible when asking questions (we are not mind readers).<br>
+Be as clear and concise as possible when asking questions (we are not mind readers).
 ------------------------------------- Begin typing below ↓ -------------------------------------
