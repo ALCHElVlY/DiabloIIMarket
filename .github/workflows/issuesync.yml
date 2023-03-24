@@ -24,6 +24,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           issue_title=$(echo "${{ github.event.issue.title }}")
-          issue_body=$(echo "${{ github.event.issue.body }}" | tr '\n')
+          issue_body=$(echo "${{ github.event.issue.body }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
           gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloMarket-source
