@@ -1,9 +1,7 @@
-name: Sync Issues and Pull Requests
+name: Sync Project Issues
 
 on:
   issues:
-    types: [opened]
-  pull_request:
     types: [opened]
 
 jobs:
@@ -21,20 +19,17 @@ jobs:
           repository: ALCHElVlY/DiabloMarket-source
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
 
-      - name: Create Issue/PR in Private Repo
+      - name: Create Issue in Private Repo
         run: |
           issue_title=$(echo "${{ github.event.issue.title }}" | tr ' ' '_')
           issue_body=$(echo "${{ github.event.issue.body }}" | tr '\n' '\\n')
           assignee=$(echo "${{ github.event.issue.assignee.login }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
-          gh issue create -t "${issue_title}" -b "${issue_body}" -a "@me" -l -R DiabloMarket-source
-          pr_title=$(echo "${{ github.event.pull_request.title }}" | tr ' ' '_')
-          pr_body=$(echo "${{ github.event.pull_request.body }}" | tr '\n' '\\n')
-          gh pull-request create -t "${pr_title}" -b "${pr_body}" -R DiabloMarket-source
+          gh issue create -t "${issue_title}" -b "${issue_body}" -a $"{assignee}" -l $"{label}" -R DiabloMarket-source
       - name: Push changes to Private Repo
         run: |
           git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
           git config --global user.name "${{ secrets.GIT_USER_NAME }}"
           git add .
-          git commit -m "Sync issues and pull requests"
+          git commit -m "Syncing issues.."
           git push
