@@ -25,10 +25,12 @@ jobs:
         run: |
           issue_title=$(echo "${{ github.event.issue.title }}" | tr ' ' '_')
           issue_body=$(echo "${{ github.event.issue.body }}" | tr '\n' '\\n')
+          assignee=$(echo "${{ github.event.issue.assignee.login }}")
+          label=$(echo "${{ github.event.issue.labels[0].name }}")
+          gh issue create -t "${issue_title}" -b "${issue_body}" -a "@me" -l -R DiabloMarket-source
           pr_title=$(echo "${{ github.event.pull_request.title }}" | tr ' ' '_')
           pr_body=$(echo "${{ github.event.pull_request.body }}" | tr '\n' '\\n')
-          hub issue create -m "${issue_title}" -m "${issue_body}" -R DiabloMarket-source
-          hub pull-request create -m "${pr_title}" -m "${pr_body}" -R DiabloMarket-source
+          gh pull-request create -t "${pr_title}" -b "${pr_body}" -R DiabloMarket-source
       - name: Push changes to Private Repo
         run: |
           git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
