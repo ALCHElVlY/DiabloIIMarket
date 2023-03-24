@@ -1,0 +1,33 @@
+name: Sync Issue Comments
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Public Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/diabloii-market
+      - name: Checkout Private Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/DiabloMarket-source
+          token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+      - name: Sync Public to Private
+        if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/diabloii-market')
+        run: |
+          public_url=${{ github.event.comment.html_url }}
+          private_url=$(echo $public_url | sed 's/public/source/g')
+          private_comment=$(echo "${{ github.event.comment.body }}" | sed 's/"/\\"/g')
+          echo "Syncing comment from public to private..."
+          gh api "$private_url" -f body="$private_comment"
+      - name: Sync Private to Public
+        if: startsWith(github.event.comment.html_url, 'https://github.com/ALCHElVlY/DiabloMarket-source')
+        run: |
+          private_url=${{ github.event.comment.html_url }}
+          public_url=$(echo $private_url | sed 's/source/public/g')
+          public_comment=$(echo "${{ github.event.comment.body }}" | sed 's/"/\\"/g')
+          echo "Syncing comment from private to public..."
+          gh api "$public_url" -f body="$public_comment"
