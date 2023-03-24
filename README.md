@@ -51,7 +51,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project <a name="about-the-project"></a>
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
@@ -64,22 +64,22 @@
 
 
 <!-- API Documentation -->
-## API
+## API Documentation <a name="docs"></a>
 
 <code>__API documentation coming soon..__</code>
 
 <!-- ROADMAP   [project board](https://github.com/users/ALCHElVlY/projects/3)-->
-## Roadmap
+## Roadmap <a name="roadmap"></a>
 
 See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and <a href="https://github.com/users/ALCHElVlY/projects/3" target="_blank">project board</a> for a list of planned updates.
 
 <!-- LICENSE -->
-## License
+## License <a name="license"></a>
 
 None.
 
 <!-- CONTACT -->
-## Contact
+## Contact <a name="contact"></a>
 
 Email: beskar.labs@outlook.com<br>
 Website: www.beskarlabs.com<br>
@@ -87,7 +87,7 @@ Facebook: n/a<br>
 Twitter: n/a
 
 <!-- ACKNOWLEDGEMENTS -->
-## ACKNOWLEDGEMENTS
+## ACKNOWLEDGEMENTS <a name="acknowledgements"></a>
 
 <ol>
   <li>
