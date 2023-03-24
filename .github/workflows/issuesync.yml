@@ -20,6 +20,8 @@ jobs:
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
 
       - name: Create Issue in Private Repo
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           issue_title=$(echo "${{ github.event.issue.title }}" | tr ' ' '_')
           issue_body=$(echo "${{ github.event.issue.body }}" | tr '\n' '\\n')
