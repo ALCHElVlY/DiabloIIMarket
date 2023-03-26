@@ -5,8 +5,18 @@ on:
     types: [opened]
 
 jobs:
+  install_gh_cli:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install gh CLI
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-add-repository https://cli.github.com/packages
+          sudo apt update
+          sudo apt install gh
   check_duplicate:
     runs-on: ubuntu-latest
+    needs: install_gh_cli
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
