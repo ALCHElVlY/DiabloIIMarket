@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Private Repo
         uses: actions/checkout@v2
         with:
-          repository: ALCHElVlY/DiabloMarket-source
+          repository: ALCHElVlY/DiabloIIMarket-source
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
 
       - name: Create Issue in Private Repo
@@ -26,4 +26,4 @@ jobs:
           issue_title=$(echo "${{ github.event.issue.title }}")
           issue_body=$(echo "${{ github.event.issue.body }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
-          gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloMarket-source
+          gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloIIMarket-source
