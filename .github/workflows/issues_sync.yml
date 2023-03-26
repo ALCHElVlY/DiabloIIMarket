@@ -23,8 +23,8 @@ jobs:
           fi
           if [[ -n "$results" ]]; then
             echo "An issue with the same title already exists with title: $duplicate"
-            gh issue edit echo "$issue_num" --add-label "duplicate"
-            gh issue close echo "$issue_num"
+            gh issue edit "$issue_num" --add-label "duplicate"
+            gh issue close "$issue_num"
             exit 1
           fi
   sync_issues:
