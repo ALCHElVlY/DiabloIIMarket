@@ -15,13 +15,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           title=$(jq --raw-output '.issue.title | sub("^\\[[^\\]]+\\]: "; "")' "$GITHUB_EVENT_PATH")
+          issue_num=$(jq --raw-output '.issue.title' "$GITHUB_EVENT_PATH")
           results=$(gh issue list --state=all --search="$title" | sed '1d' | tr '\t' '|')
           if [[ -z "$results" ]]; then
             echo "No issues found"
             exit 0
           fi
           if [[ -n "$results" ]]; then
-            echo "$title"
+            echo "$issue_num"
             echo "An issue with the same title already exists with title: $duplicate"
             gh issue add-labels ${GITHUB_EVENT_NUMBER} duplicate
             gh issue close ${GITHUB_EVENT_NUMBER}
