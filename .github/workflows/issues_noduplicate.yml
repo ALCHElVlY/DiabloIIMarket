@@ -15,7 +15,7 @@ jobs:
           title=$(jq --raw-output .issue.title "$GITHUB_EVENT_PATH")
           repo=$(jq --raw-output .repository.full_name "$GITHUB_EVENT_PATH")
           tags=$(jq --raw-output '.issue.labels | map(.name) | join(",")' "$GITHUB_EVENT_PATH")
-          duplicate=$(gh issue list --state=all --labels="$tags" --title="$title" | grep -o "$repo")
+          duplicate=$(gh issue list --state=all --label="$tags" --title="$title" | grep -o "$repo")
           if [[ -n "$duplicate" ]]; then
             echo "An issue with the same title and labels already exists in $duplicate"
             gh issue close "$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")"
