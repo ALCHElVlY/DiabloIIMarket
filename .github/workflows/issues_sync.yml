@@ -17,6 +17,7 @@ jobs:
           title=$(jq --raw-output '.issue.title | sub("^\\[[^\\]]+\\]: "; "")' "$GITHUB_EVENT_PATH")
           echo "Modified title: $title"
           results=$(gh issue list --state=all --search="$title")
+          echo "Results: $results"
           if [[ -z "$results" ]]; then
             echo "No issues found"
             exit 0
