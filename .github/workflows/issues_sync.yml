@@ -13,6 +13,7 @@ jobs:
       - name: Check for duplicate issues
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          PRIVATE_REPO_NAME: ${{ secrets.DIABLOMARKET_PRIVATEREPO }}
         run: |
           title=$(jq --raw-output '.issue.title | sub("^\\[[^\\]]+\\]: "; "")' "$GITHUB_EVENT_PATH")
           issue_num=$(jq --raw-output '.issue.number' "$GITHUB_EVENT_PATH")
@@ -39,14 +40,13 @@ jobs:
       - name: Checkout Private Repo
         uses: actions/checkout@v2
         with:
-          repository: ALCHElVlY/DiabloIIMarket-source
+          repository: ${{ env.PRIVATE_REPO_NAME }}
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
 
       - name: Create Issue in Private Repo
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          private_repo=$(echo "${{ secrets.DIABLOMARKET_PRIVATEREPO }}")
           issue_title=$(echo "${{ github.event.issue.title }}")
           issue_body=$(echo "${{ github.event.issue.body }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
-          gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloIIMarket-source
+          gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/${{ env.PRIVATE_REPO_NAME }}
