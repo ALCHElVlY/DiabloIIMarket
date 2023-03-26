@@ -22,10 +22,9 @@ jobs:
             exit 0
           fi
           if [[ -n "$results" ]]; then
-            echo "$issue_num"
             echo "An issue with the same title already exists with title: $duplicate"
-            gh issue add-labels ${GITHUB_EVENT_NUMBER} duplicate
-            gh issue close ${GITHUB_EVENT_NUMBER}
+            gh issue edit echo "$issue_num" --add-label "duplicate"
+            gh issue close echo "$issue_num"
             exit 1
           fi
   sync_issues:
