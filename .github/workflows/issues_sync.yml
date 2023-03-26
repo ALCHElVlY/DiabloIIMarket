@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  sync:
+  sync_issues:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Public Repo
@@ -26,4 +26,8 @@ jobs:
           issue_title=$(echo "${{ github.event.issue.title }}")
           issue_body=$(echo "${{ github.event.issue.body }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
+          if [[ "${label}" == "duplicate" ]]; then
+            echo "Skipping issue with 'duplicate' label"
+            exit 0
+          fi
           gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloIIMarket-source
