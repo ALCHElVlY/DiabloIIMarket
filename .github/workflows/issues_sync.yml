@@ -5,8 +5,31 @@ on:
     types: [opened]
 
 jobs:
+  check_duplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Check for duplicate issues
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          title=$(jq --raw-output .issue.title "$GITHUB_EVENT_PATH")
+          repo=$(jq --raw-output .repository.full_name "$GITHUB_EVENT_PATH")
+          duplicate=$(gh issue list --state=all --label=duplicate --title="$title" | grep -o "$repo")
+          if [[ -n "$duplicate" ]]; then
+            echo "An issue with the same title already exists in $duplicate"
+            gh issue add-label ${GITHUB_EVENT_NUMBER} duplicate
+            gh issue close ${GITHUB_EVENT_NUMBER}
+            exit 0
+          else
+            echo "No duplicate issues found, proceeding with sync"
+            exit 1
+          fi
+
   sync_issues:
     runs-on: ubuntu-latest
+    needs: check_duplicate
     steps:
       - name: Checkout Public Repo
         uses: actions/checkout@v2
@@ -26,8 +49,4 @@ jobs:
           issue_title=$(echo "${{ github.event.issue.title }}")
           issue_body=$(echo "${{ github.event.issue.body }}")
           label=$(echo "${{ github.event.issue.labels[0].name }}")
-          if [[ "${label}" == "duplicate" ]]; then
-            echo "Skipping issue with 'duplicate' label"
-            exit 0
-          fi
           gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/ALCHElVlY/DiabloIIMarket-source
