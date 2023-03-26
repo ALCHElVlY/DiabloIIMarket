@@ -21,10 +21,10 @@ jobs:
             echo "An issue with the same title already exists in $duplicate"
             gh issue add-label ${GITHUB_EVENT_NUMBER} duplicate
             gh issue close ${GITHUB_EVENT_NUMBER}
-            exit 0
+            exit 1
           else
             echo "No duplicate issues found, proceeding with sync"
-            exit 1
+            exit 0
           fi
 
   sync_issues:
