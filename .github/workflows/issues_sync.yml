@@ -22,7 +22,7 @@ jobs:
             exit 0
           fi
           if [[ -n "$results" ]]; then
-            echo "An issue with the same title already exists with title: $duplicate"
+            echo "An issue with the same title already exists with title: $title"
             gh issue edit "$issue_num" --add-label "duplicate"
             gh issue close "$issue_num"
             exit 1
