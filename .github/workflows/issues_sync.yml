@@ -14,7 +14,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          cat $GITHUB_EVENT_PATH
+          jq --raw-output '.issue.title' "$GITHUB_EVENT_PATH"
           title=$(jq --raw-output '.issue.title | sub("^\\[[^\\]]+\\]: "; "")' "$GITHUB_EVENT_PATH")
           echo "Modified title: $title"
           duplicate=$(gh issue list --state=all --search="$title" | jq -r --arg title "$title" '.[] | select(.title | contains($title)) | .title // empty')
