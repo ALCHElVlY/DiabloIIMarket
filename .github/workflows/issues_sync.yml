@@ -14,10 +14,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          title=$(jq --raw-output .issue.title "$GITHUB_EVENT_PATH")
-          duplicate=$(gh issue list --state=all --label=duplicate --repo="$repo" --search="$title" | grep -o "$title" || true)
-          if [[ -n "$duplicate" ]]; then
-            echo "An issue with the same title already exists with title: $duplicate"
+          title=$(jq --raw-output .issue.title "$GITHUB_EVENT_PATH" | tr '[:upper:]' '[:lower:]' | sed -e 's/[[:punct:]]//g' -e 's/[[:space:]]//g')
+          duplicates=$(gh issue list --state=all --label=duplicate --repo="$repo" --search="$title" --json title | jq -r '.[].title | @sh')
+          if echo "$duplicates" | grep -q "^$(echo "$title" | @sh)$"; then
+            echo "An issue with the same title already exists with title: $duplicates"
             gh issue add-label ${GITHUB_EVENT_NUMBER} duplicate
             gh issue close ${GITHUB_EVENT_NUMBER}
             exit 1
