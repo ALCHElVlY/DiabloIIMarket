@@ -14,27 +14,33 @@ env:
   WORKFLOWS: |
     issues:
       file: "issues/issue_sync.yaml"
-      types: ["opened"]
+      types: ["opened"],
     issue_comment:
       file: "issues/issue_comment_sync.yaml"
-      types: ["created"]
+      types: ["created"],
     pull_request:
       file: "pull-requests/pr_sync.yaml"
-      types: ["opened"]
+      types: ["opened"],
     pull_request_comment_create:
-      files: "pull-requests/pr_comment_sync.yaml"
+      file: "pull-requests/pr_comment_sync.yaml"
       types: ["created"]
 
 jobs:
   choose_and_run:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        workflow: ${{ fromEntries(fromJson(env.WORKFLOWS)) | map(v => v[0]) }}
     steps:
-      - name: Find workflow
+      - name: Find matching workflow
         id: find_workflow
         run: |
-          echo ::set-output name=file::${{ env.WORKFLOWS[fromJson(github.event_name)].file }}
-        env:
-          WORKFLOWS: ${{ env.WORKFLOWS }}
+          for key, value in ${{ fromJson(env.WORKFLOWS) }}.items():
+            if contains(value.types, github.event_name):
+              echo "::set-output name=file::${value.file}"
+              echo "::set-output name=name::${key}"
+              return 0
+          return 1
       - name: Run workflow
-        if: steps.find_workflow.outputs.file != ''
+        if: ${{ steps.find_workflow.outputs.file != null }}
         uses: ./${{ steps.find_workflow.outputs.file }}
