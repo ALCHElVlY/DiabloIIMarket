@@ -29,16 +29,12 @@ jobs:
   choose_and_run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Find matching workflow
+      - name: Find workflow
         id: find_workflow
         run: |
-          WORKFLOWS=$(echo "${{ env.WORKFLOWS }}" | jq -r '.')
-          echo "${WORKFLOWS}" | jq -r "to_entries[] | select(.value.types | index(\"${{ github.event_name }}\") != null) | .value + {name: .key}" | jq -s "max_by(.types | length)" > matching_workflow.json
-        shell: bash
-
-      - name: Run specific workflow
-        if: steps.find_workflow.outputs.name != null
-        uses: "./${{ fromJson(steps.find_workflow.outputs.name).file }}"
+          echo ::set-output name=file::${{ env.WORKFLOWS[fromJson(github.event_name)].file }}
+        env:
+          WORKFLOWS: ${{ env.WORKFLOWS }}
+      - name: Run workflow
+        if: steps.find_workflow.outputs.file != ''
+        uses: ./${{ steps.find_workflow.outputs.file }}
