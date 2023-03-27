@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        workflow: ${{ fromEntries(fromJson(env.WORKFLOWS)) | map(v => v[0]) }}
+        workflow: [$env.WORKFLOWS]
     steps:
       - name: Find matching workflow
         id: find_workflow
