@@ -1,0 +1,55 @@
+name: Sync Project Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  check_duplicate:
+    runs-on: ubuntu-latest
+    env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        PRIVATE_REPO_NAME: ${{ secrets.DIABLOMARKET_PRIVATEREPO }}
+    steps:
+      - name: issues/Checkout repository
+        uses: actions/checkout@v2
+      - name: issues/Check for duplicate issues
+        run: |
+          title=$(jq --raw-output '.issue.title | sub("^\\[[^\\]]+\\]: "; "")' "$GITHUB_EVENT_PATH")
+          issue_num=$(jq --raw-output '.issue.number' "$GITHUB_EVENT_PATH")
+          results=$(gh issue list --state=all --search="$title" | sed '1d' | tr '\t' '|')
+          if [[ -z "$results" ]]; then
+            echo "No issues found"
+            exit 0
+          fi
+          if [[ -n "$results" ]]; then
+            echo "An issue with the same title already exists with title: $title"
+            gh issue edit "$issue_num" --add-label "duplicate"
+            gh issue close "$issue_num"
+            exit 1
+          fi
+  sync_issues:
+    runs-on: ubuntu-latest
+    needs: check_duplicate
+    env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        PRIVATE_REPO_NAME: ${{ secrets.DIABLOMARKET_PRIVATEREPO }}
+    steps:
+      - name: issues/Checkout Public Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/diabloii-market
+      
+      - name: issues/Checkout Private Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PRIVATE_REPO_NAME }}
+          token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+
+      - name: issues/Create Issue in Private Repo
+        run: |
+          private_repo=$(echo "${{ env.PRIVATE_REPO_NAME }}")
+          issue_title=$(echo "${{ github.event.issue.title }}")
+          issue_body=$(echo "${{ github.event.issue.body }}")
+          label=$(echo "${{ github.event.issue.labels[0].name }}")
+          gh issue create -t "${issue_title}" -b "${issue_body}" -l "${label}" -R https://github.com/$private_repo
