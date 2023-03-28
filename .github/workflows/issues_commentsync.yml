@@ -1,0 +1,27 @@
+name: Sync Issue Comments
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        PRIVATE_REPO_NAME: ${{ secrets.DIABLOMARKET_PRIVATEREPO }}
+    steps:
+      - name: Checkout Public Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ALCHElVlY/diabloii-market
+      - name: Checkout Private Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PRIVATE_REPO_NAME }}
+          token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+      - name: Sync Public to Private
+        run: |
+          public_title=$(echo "${{ github.event.issue.title }}" | sed 's/"/\\"/g')
+          private_url=$(gh api -X GET "repos/${{ env.PRIVATE_REPO_NAME }}/issues?state=open" | jq -r '.[] | select(.title=="'"$public_title"'") | .url')
+          private_comment=$(echo "${{ github.event.comment.body }}" | sed 's/"/\\"/g')
+          echo "Syncing comment from public to private..."
+          gh api "$private_url" -f body="$private_comment"
