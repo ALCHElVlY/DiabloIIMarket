@@ -28,14 +28,12 @@ env:
 jobs:
   choose_and_run:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        workflow: [$env.WORKFLOWS]
     steps:
       - name: Find matching workflow
         id: find_workflow
         run: |
-          for key, value in ${{ fromJson(env.WORKFLOWS) }}.items():
+          for key in ${{ fromJson(env.WORKFLOWS).keys() }}:
+            value = fromJson(env.WORKFLOWS)[key]
             if contains(value.types, github.event_name):
               echo "::set-output name=file::${value.file}"
               echo "::set-output name=name::${key}"
