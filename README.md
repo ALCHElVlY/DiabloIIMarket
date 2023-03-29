@@ -18,7 +18,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://github.com/ALCHElVlY/d2r-market/blob/main/src/frontend/public/assets/logos/D2R-Market-Logo-03.png"
+    <img src="https://github.com/ALCHElVlY/diabloii-market/blob/main/.github/assets/images/D2R-Market-Logo-03.png"
          alt="Logo" width="400" height="140">
   </a>
 
