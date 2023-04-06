@@ -27,7 +27,7 @@
       Report Bug
     </a>
     ·
-    <a href="https://github.com/ALCHElVlY/diablo-market-public/issues/new?assignees=&labels=&template=feature_request.md&title=" target="_blank">
+    <a href="https://github.com/ALCHElVlY/diabloii-market/issues/new?assignees=ALCHElVlY&labels=enhancement&template=feature_request.md&title=%5BFeature+Request%5D%3A+%3Cinsert+title%3E" target="_blank">
       Request Feature
     </a>
     ·
