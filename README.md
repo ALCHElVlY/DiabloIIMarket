@@ -31,7 +31,7 @@
       Request Feature
     </a>
     ·
-    <a href="https://discord.gg/WqunCan">Support Discord</a>
+    <a href="https://discord.gg/sgwegN4WsT">Support Discord</a>
   </p>
 </p>
 
