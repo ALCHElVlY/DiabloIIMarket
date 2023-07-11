@@ -80,8 +80,6 @@ None.
 
 Email: beskar.labs@outlook.com<br>
 Website: www.beskarlabs.com<br>
-Facebook: n/a<br>
-Twitter: n/a
 
 <!-- ACKNOWLEDGEMENTS -->
 ## ACKNOWLEDGEMENTS <a name="acknowledgements"></a>
