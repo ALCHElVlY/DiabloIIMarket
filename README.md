@@ -91,7 +91,7 @@ Website: www.beskarlabs.com<br>
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [readme-url]: https://github.com/ALCHElVlY/d2r-market#readme
-[version-shield]: https://img.shields.io/github/manifest-json/version/ALCHElVlY/diabloii-market/master?color=blue&style=for-the-badge
+[version-shield]: https://img.shields.io/github/manifest-json/v/ALCHElVlY/diabloii-market?style=for-the-badge
 [issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diabloii-market?color=blue&style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/manifest-json/contributors/ALCHElVlY/diabloii-market/master?color=blue&style=for-the-badge&label=contributors
-[keywords-shield]: https://img.shields.io/github/manifest-json/keywords/ALCHElVlY/diabloii-market/master?style=for-the-badge&label=keywords
+[contributors-shield]: https://img.shields.io/github/manifest-json/contributors/ALCHElVlY/diabloii-market/main?color=blue&style=for-the-badge&label=contributors
+[keywords-shield]: https://img.shields.io/github/manifest-json/keywords/ALCHElVlY/diabloii-market/main?style=for-the-badge&label=keywords
