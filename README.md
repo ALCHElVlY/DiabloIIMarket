@@ -65,10 +65,6 @@
 
 <code>__API documentation coming soon..__</code>
 
-<!-- ROADMAP   [project board](https://github.com/users/ALCHElVlY/projects/3)-->
-## Roadmap <a name="roadmap"></a>
-
-See the [open issues](https://github.com/ALCHElVlY/diablo-market-public/issues) for a list of known issues, and <a href="https://github.com/users/ALCHElVlY/projects/3" target="_blank">project board</a> for a list of planned updates.
 
 <!-- LICENSE -->
 ## License <a name="license"></a>
