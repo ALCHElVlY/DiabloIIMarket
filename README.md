@@ -6,7 +6,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![][readme-shield]][readme-url]
 ![][version-shield]
 ![][contributors-shield]
 ![][issues-shield]
@@ -91,9 +90,8 @@ Website: www.beskarlabs.com<br>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[readme-shield]: https://img.shields.io/badge/readme%20style-standard-blue.svg?style=for-the-badge
 [readme-url]: https://github.com/ALCHElVlY/d2r-market#readme
-[version-shield]: https://img.shields.io/github/package-json/version/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
-[keywords-shield]: https://img.shields.io/github/package-json/keywords/ALCHElVlY/diablo-market-public?color=blue&style=for-the-badge
+[version-shield]: https://img.shields.io/github/manifest-json/version/ALCHElVlY/diabloii-market/master?color=blue&style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diabloii-market?color=blue&style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/manifest-json/contributors/ALCHElVlY/diabloii-market/master?color=blue&style=for-the-badge&label=contributors
+[keywords-shield]: https://img.shields.io/github/manifest-json/keywords/ALCHElVlY/diabloii-market/master?style=for-the-badge&label=keywords
