@@ -12,7 +12,6 @@
 ![][keywords-shield]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -42,20 +41,24 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li><a href="#docs">Documentation</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project <a name="about-the-project"></a>
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
 <p>
-   Diabloii.market is a robust web application designed for players of Diablo II: Resurrected to trade in-game items and services with each other using in-game currency such as high runes (HR). With our "post n go" system, players can trade seamlessly across multiple platforms without having to wait endlessly in-game. To ensure a smooth and safe transaction process, we require Battle.net authentication for all trades conducted through our app. Our platform maintains a zero-tolerance policy for dishonest behavior, including but not limited to scamming in any form, or attempting to trade with real-world currency. Any players found engaging in such behavior will be reported directly to Blizzard. Join our community of trusted players today and experience hassle-free trading in Diablo II: Resurrected!
+  Welcome to Diabloii.market, the ultimate web application tailored exclusively for Diablo II: Resurrected players seeking a seamless and secure platform to trade in-game items and services using coveted high runes (HR) and other in-game currencies. Our feature-rich platform empowers gamers to engage in hassle-free trading across multiple platforms through our innovative 'post n go' system, eliminating the frustration of waiting endlessly in-game.
+  
+  What sets us apart is our unwavering commitment to safety and trust. To ensure the highest level of security, all trades are subjected to Battle.net authentication, providing you with peace of mind during every transaction. Our community thrives on mutual respect and integrity, as we maintain a zero-tolerance policy against any form of dishonest behavior, including scams or attempts to trade with real-world currency. In cases of misconduct, we are dedicated to safeguarding the community, promptly reporting offending players directly to Blizzard.
+  
+  Our user-friendly interface makes navigating the marketplace a breeze, allowing you to easily showcase your prized items, search for specific gear, or find trustworthy service providers. We foster a strong sense of camaraderie among players, creating a vibrant and supportive community where experienced veterans and enthusiastic newcomers alike can come together to exchange treasures and embark on epic adventures.
+  
+  At Diabloii.market, our vision is to revolutionize the trading experience in Diablo II: Resurrected, enhancing your gameplay with an array of powerful items and services while maintaining a secure and trustworthy environment. Join our community of dedicated players today, and unlock a world of limitless possibilities for your Diablo II journey. Embrace the excitement of trading with confidence, and let us be your gateway to an enriched gaming experience in Diablo II: Resurrected!
 </p>
 
 
@@ -70,11 +73,12 @@
 
 None.
 
+
 <!-- CONTACT -->
 ## Contact <a name="contact"></a>
 
 Email: beskar.labs@outlook.com<br>
-Website: www.beskarlabs.com<br>
+
 
 <!-- ACKNOWLEDGEMENTS -->
 ## ACKNOWLEDGEMENTS <a name="acknowledgements"></a>
