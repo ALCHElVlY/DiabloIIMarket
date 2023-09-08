@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Public Repo
         uses: actions/checkout@v2
         with:
-          repository: ALCHElVlY/diabloii-market
+          repository: ALCHElVlY/DiabloIIMarket
       - name: Checkout Private Repo
         uses: actions/checkout@v2
         with:
