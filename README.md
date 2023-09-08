@@ -1,17 +1,3 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-![][version-shield]
-![][contributors-shield]
-![][issues-shield]
-![][keywords-shield]
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -31,6 +17,11 @@
     ·
     <a href="https://discord.gg/sgwegN4WsT">Support Discord</a>
   </p>
+
+  ![][version-shield]
+  ![][contributors-shield]
+  ![][issues-shield]
+  ![][keywords-shield]
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -95,7 +86,7 @@ Email: beskar.labs@outlook.com<br>
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [readme-url]: https://github.com/ALCHElVlY/d2r-market#readme
-[version-shield]: https://img.shields.io/github/manifest-json/v/ALCHElVlY/diabloii-market?style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diabloii-market?color=blue&style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/manifest-json/contributors/ALCHElVlY/diabloii-market/main?color=blue&style=for-the-badge&label=contributors
-[keywords-shield]: https://img.shields.io/github/manifest-json/keywords/ALCHElVlY/diabloii-market/main?style=for-the-badge&label=keywords
+[version-shield]: https://img.shields.io/github/manifest-json/v/ALCHElVlY/diabloii-market?style=plastic
+[issues-shield]: https://img.shields.io/github/issues/ALCHElVlY/diabloii-market?color=blue&style=plastic
+[contributors-shield]: https://img.shields.io/github/manifest-json/contributors/ALCHElVlY/diabloii-market/main?color=blue&label=contributors&style=plastic
+[keywords-shield]: https://img.shields.io/github/manifest-json/keywords/ALCHElVlY/diabloii-market/main?color=blue&label=keywords&style=plastic
