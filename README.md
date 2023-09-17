@@ -43,13 +43,13 @@
 ## About The Project <a name="about-the-project"></a>
 
 <p>
-  Welcome to diabloii.market, the ultimate web application tailored exclusively for Diablo II: Resurrected players seeking a seamless and secure platform to trade in-game items and services using coveted high runes (HR) and other in-game currencies. Our feature-rich platform empowers gamers to engage in hassle-free trading across multiple platforms through our innovative 'post n go' system, eliminating the frustration of waiting endlessly in-game.
+  Welcome to d2.diablo.market, the ultimate web application tailored exclusively for Diablo II: Resurrected players seeking a seamless and secure platform to trade in-game items and services using coveted high runes (HR) and other in-game currencies. Our feature-rich platform empowers gamers to engage in hassle-free trading across multiple platforms through our innovative 'post n go' system, eliminating the frustration of waiting endlessly in-game.
   
   What sets us apart is our unwavering commitment to safety and trust. To ensure the highest level of security, all trades are subjected to Battle.net authentication, providing you with peace of mind during every transaction. Our community thrives on mutual respect and integrity, as we maintain a zero-tolerance policy against any form of dishonest behavior, including scams or attempts to trade with real-world currency. In cases of misconduct, we are dedicated to safeguarding the community, promptly reporting offending players directly to Blizzard.
   
   Our user-friendly interface makes navigating the marketplace a breeze, allowing you to easily showcase your prized items, search for specific gear, or find trustworthy service providers. We foster a strong sense of camaraderie among players, creating a vibrant and supportive community where experienced veterans and enthusiastic newcomers alike can come together to exchange treasures and embark on epic adventures.
   
-  At diabloii.market, our vision is to revolutionize the trading experience in Diablo II: Resurrected, enhancing your gameplay with an array of powerful items and services while maintaining a secure and trustworthy environment. Join our community of dedicated players today, and unlock a world of limitless possibilities for your Diablo II journey. Embrace the excitement of trading with confidence, and let us be your gateway to an enriched gaming experience in Diablo II: Resurrected!
+  At d2.diablo.market, our vision is to revolutionize the trading experience in Diablo II: Resurrected, enhancing your gameplay with an array of powerful items and services while maintaining a secure and trustworthy environment. Join our community of dedicated players today, and unlock a world of limitless possibilities for your Diablo II journey. Embrace the excitement of trading with confidence, and let us be your gateway to an enriched gaming experience in Diablo II: Resurrected!
 </p>
 
 
