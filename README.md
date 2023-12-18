@@ -68,7 +68,7 @@ None.
 <!-- CONTACT -->
 ## Contact <a name="contact"></a>
 
-Email: beskar.labs@outlook.com<br>
+Email: william.holt90@outlook.com<br>
 
 
 <!-- ACKNOWLEDGEMENTS -->
