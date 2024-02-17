@@ -15,7 +15,7 @@
       Request Feature
     </a>
     ·
-    <a href="https://discord.gg/sgwegN4WsT">Support Discord</a>
+    <a href="https://discord.gg/JQK4aXaPrS">Support Discord</a>
   </p>
 
   ![][version-shield]
